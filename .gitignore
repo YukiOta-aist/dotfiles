@@ -1,3 +1,7 @@
+# dump files
+/._.DS_Store
+/.DS_Store
+
 # emacs
 /.emacs.d
 
