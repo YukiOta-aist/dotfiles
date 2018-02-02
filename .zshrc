@@ -180,7 +180,17 @@ alias la="ls -a"
 alias ll="ls -lafg"
 alias sshwaseda="ssh yukiota@murata.eb.waseda.ac.jp"
 alias e="emac"
-alias jupyterqt="jupyter qtconsole --style=monokai --ConsoleWidget.font_family="Ricty" --ConsoleWidget.font_size=12"
+alias jupyterqt='jupyter qtconsole --style=monokai --ConsoleWidget.font_family="Ricty" --ConsoleWidget.font_size=12'
+gitlazy() {
+    git commit --allow-empty-message -am “$*”
+    git push
+}
+mountlab(){
+	sshfs svc.aaic.hpcc.jp:/home/yukiota ~/mountpoint/home
+}
+unmountlab(){
+    umount ~/mountpoint/home
+}
 # }}}
 
 # anyframeのキーバインド{{{
