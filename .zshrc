@@ -185,11 +185,20 @@ gitlazy() {
     git commit --allow-empty-message -am “$*”
     git push
 }
-mountlab(){
+mountaaic(){
 	sshfs svc.aaic.hpcc.jp:/home/yukiota ~/mountpoint/home
+}
+unmountaaic(){
+    umount ~/mountpoint/home
+}
+
+mountlab(){
+	sshfs murata.eb.waseda.ac.jp:/home ~/mountpoint/home
+	sshfs murata.eb.waseda.ac.jp:/home/lab/yukiota ~/mountpoint/yukiota
 }
 unmountlab(){
     umount ~/mountpoint/home
+    umount ~/mountpoint/yukiota
 }
 # }}}
 
